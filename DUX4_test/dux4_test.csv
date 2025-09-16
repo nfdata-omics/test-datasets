@@ -1,0 +1,12 @@
+sample,fastq_1,fastq_2,library_type,condition
+rep1_0h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/rna_reads_rep1_00h.fasta.gz,,RNA,0h
+rep1_14h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/rna_reads_rep1_14h.fasta.gz,,RNA,14h
+rep2_0h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/rna_reads_rep2_00h.fasta.gz,,RNA,0h
+rep2_14h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/rna_reads_rep2_14h.fasta.gz,,RNA,14h
+rep1_0h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/ribo_reads_rep1_00h.fasta.gz,,Ribo,0h
+rep1_14h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/ribo_reads_rep1_14h.fasta.gz,,Ribo,14h
+rep2_0h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/ribo_reads_rep2_00h.fasta.gz,,Ribo,0h
+rep2_14h,https://raw.githubusercontent.com/nfdata-omics/test-datasets/R2T2P/DUX4_test/ribo_reads_rep2_14h.fasta.gz,,Ribo,14h
+,,,,
+,,,,
+,,,,
