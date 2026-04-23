@@ -1,0 +1,8 @@
+sample,cram,species
+scer_BY4742,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/scer_BY4742.mapped_only.cram,scer
+scer_E59,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/scer_E59.mapped_only.cram,scer
+scer_SA1,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/scer_SA1.mapped_only.cram,scer
+seub_UCD646,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/seub_UCD646.mapped_only.cram,seub
+spar_337,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/spar_337.mapped_only.cram,spar
+spar_R43,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/spar_R43.mapped_only.cram,spar
+spar_yHKS224,https://raw.githubusercontent.com/nfdata-omics/test-datasets/crosspopgen/saccharomyces/spar_yHKS224.mapped_only.cram,spar
