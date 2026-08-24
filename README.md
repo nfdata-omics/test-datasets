@@ -64,6 +64,26 @@ directrna/
     └── drna_transcriptome.fa
 ```
 
+### `*.eventalign.txt` — signal fixture for the modification tests
+
+`nanopolish eventalign` of each sample against `genome/drna_transcriptome.fa`, produced
+with the same flags as `modules/local/nanopolish_eventalign/main.nf`
+(`--scale-events --signal-index --summary`), then trimmed. Regenerate with
+`tests/data/directrna/generate_eventalign_fixture.sh`, which runs the chain and calls
+`trim_eventalign_fixture.py` on the result.
+
+| transcript | window (WT / KO) | reads kept |
+| --- | --- | --- |
+| `ENST00000273480` | 559-859 / 557-857 | 40 |
+| `ENST00000393000` | 458-758 / 457-757 | 40 |
+| `ENST00000480908` | 439-739 / 436-736 | 40 |
+
+The windows land on the same region in both samples, which is what xpore needs: `diffmod`
+only tests sites present in both conditions.
+
+Kept uncompressed on purpose: `m6anet dataprep` builds a byte-offset index over the table,
+which does not survive gzip.
+
 ### Profile used
 
 `conf/test_direct_rna.config`:
@@ -83,6 +103,24 @@ run_sqanti:           false         # same
 > The nf-test
 > (`tests/pipeline_direct_rna.nf.test`) writes its own two-row samplesheet
 > (`wt` + `ko`). 
+
+
+### Second profile on the same data: `conf/test_methylation.config`
+
+```text
+direct_rna:              true
+run_polya:               false     # the signal branch must be reachable without it
+run_rna_modifications:   true      # m6anet, per sample
+run_rna_methylation:     true      # xpore, wt vs ko
+quantification_tool:     oarfish   # shares MINIMAP2_TRANSCRIPTOME with eventalign
+run_coding_potential:    false
+run_sqanti:              false
+```
+
+Driven by `tests/pipeline_methylation.nf.test`, which also writes its own two-row
+samplesheet. WT vs METTL3-KO is the right contrast for m6A but with one replicate per condition xpore
+cannot estimate dispersion, so the test asserts that the branch runs and produces its
+tables, not that any site is significant.
 
 ---
 
